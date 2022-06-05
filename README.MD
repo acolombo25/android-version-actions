@@ -15,6 +15,12 @@ Override your android version number and version code through github actions
 `versionName`
 **Optional**, Version Name to override
 
+`versionCodeSuffix`
+**Optional**, suffix to add at the end of Version Code
+
+`versionNameSuffix`
+**Optional**, suffix to add at the end of Version Name
+
 ## Example
 ```
 jobs:
