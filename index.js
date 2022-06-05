@@ -38,7 +38,7 @@ try {
             if (versionName.length > 0)
                 console.log(`Successfully override version code ${versionName}${versionName}`);
             if (versionNameSuffix.length > 0)
-                console.log(`Successfully added version name suffix ${versionName;
+                console.log(`Successfully added version name suffix ${versionName}`);
             core.setOutput("result", `Done`);
         });
     });
