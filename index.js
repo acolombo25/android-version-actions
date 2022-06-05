@@ -31,14 +31,12 @@ try {
             newGradle = newGradle.replace(versionNameRegexPattern, `$1\"$2${versionNameSuffix}`);
         fs.writeFile(gradlePath, newGradle, function (err) {
             if (err) throw err;
-            if (versionCode.length > 0)
-                console.log(`Successfully override version code ${versionCode}${versionCode}`);
-            if (versionCodeSuffix.length > 0)
-                console.log(`Successfully added version code suffix ${versionCode}`);
-            if (versionName.length > 0)
-                console.log(`Successfully override version code ${versionName}${versionName}`);
-            if (versionNameSuffix.length > 0)
-                console.log(`Successfully added version name suffix ${versionName}`);
+            if (versionCode.length > 0 || versionCodeSuffix.length > 0)
+                verCode = newGradle.match(versionCodeRegexPattern)[0];
+                console.log(`Successfully override version code = ${verCode}`);
+            if (versionName.length > 0 || versionNameSuffix.length > 0)
+                verName = newGradle.match(versionNameRegexPattern)[0];
+                console.log(`Successfully override version name = ${verName}`);
             core.setOutput("result", `Done`);
         });
     });
