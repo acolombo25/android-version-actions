@@ -18,8 +18,10 @@ inputs:
     description: "The version name suffix"
     required: false
 outputs:
-  result: # id of output
-    description: "Action Result"
+  versionCode:
+    description: "The new version code"
+  versionName:
+    description: "The new version name"
 runs:
   using: "node12"
   main: "index.js"
