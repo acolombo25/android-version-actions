@@ -34,7 +34,7 @@ try {
             verCode = newGradle.match(versionCodeRegexPattern)[0];
             if (versionCode.length > 0 || versionCodeSuffix.length > 0)
                 console.log(`Successfully override version code = ${verCode}`);
-            if (versionName.length > 0 || versionNameSuffix.length > 0) {
+            if (versionName.length > 0 || versionNameSuffix.length > 0)
                 console.log(`Successfully override version name = ${verName}`);
             core.setOutput("versionCode", verCode);
             core.setOutput("versionName", verName);
