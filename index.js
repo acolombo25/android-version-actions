@@ -32,6 +32,7 @@ try {
         fs.writeFile(gradlePath, newGradle, function (err) {
             if (err) throw err;
             verCode = newGradle.match(versionCodeRegexPattern)[0];
+            verName = newGradle.match(versionNameRegexPattern)[0];
             if (versionCode.length > 0 || versionCodeSuffix.length > 0)
                 console.log(`Successfully override version code = ${verCode}`);
             if (versionName.length > 0 || versionNameSuffix.length > 0)
